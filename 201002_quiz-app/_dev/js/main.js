@@ -42,6 +42,7 @@ const $contents = $doc.querySelector('[data-js="js-contents"]');
 const $start = $doc.querySelector('[data-js="js-start"]');
 const $wrapper = $doc.querySelector('[data-js="js-wrapper"]');
 const $end = $doc.querySelector('[data-js="js-end"]');
+const $next = $doc.querySelector('[data-js="js-next"]');
 
 const $startBtn = $doc.querySelector('[data-js="js-startBtn"]');
 const $retryBtn = $doc.querySelector('[data-js="js-retryBtn"]');
@@ -82,6 +83,7 @@ const goToNext = () => {
   while (btnIndex < buttonLen) {
     $buttons[btnIndex].classList.remove('quizContents__choices--correct');
     $buttons[btnIndex].classList.remove('quizContents__choices--incorrect');
+    $next.classList.remove('quizNext--active');
     $buttons[btnIndex].disabled = false;
     btnIndex++;
   }
@@ -123,7 +125,8 @@ const judge = (elm) => {
     btnIndex++;
   }
 
-  setTimeout('goToNext()', 3000);
+  $next.classList.add('quizNext--active');
+  $next.addEventListener('click', goToNext);
 };
 
 const showEnd = () => {

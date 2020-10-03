@@ -99,19 +99,21 @@
   }
 }
 
+.quizNext,
 .quiz__retryBtn {
   @include mixin.mq(tablet) {
-    width: 80%;
+    width: 80vw;
   }
 
   @include mixin.mq() {
-    width: 80%;
+    width: 80vw;
   }
 }
 
 .quizStart__startBtn,
 .quiz__retryBtn,
-.quizContents__choices {
+.quizContents__choices,
+.quizNext {
   display: block;
   padding: 12px 16px;
   font-size: 2.4rem;
@@ -151,6 +153,7 @@
 }
 
 .quizContents__choices:not(:first-of-type),
+.quizNext,
 .quiz__retryBtn {
   margin: 16px auto 0;
 
@@ -204,7 +207,8 @@
 
 .quiz__start,
 .quiz__wrapper,
-.quiz__end {
+.quiz__end,
+.quizNext {
   display: none;
 }
 
@@ -215,7 +219,8 @@
 }
 
 .quiz__wrapper--active,
-.quiz__end--active {
+.quiz__end--active,
+.quizNext--active {
   display: block;
 }
 
