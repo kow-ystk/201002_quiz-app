@@ -27,10 +27,12 @@
 
   @include mixin.mq(tablet) {
     display: block;
+    width: 90vw;
   }
 
   @include mixin.mq(){
     display: block;
+    width: 90vw;
   }
 }
 
