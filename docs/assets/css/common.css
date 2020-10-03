@@ -142,7 +142,7 @@ ul {
   position: fixed;
   width: 100%;
   color: #fafafa;
-  background: #0288d1;
+  background: linear-gradient(to top right, #0288d1, #b3e5fc);
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .header {
@@ -161,7 +161,7 @@ ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 @media screen and (max-width: 767px) {
   .header__inner {
@@ -170,30 +170,35 @@ ul {
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .header__inner {
-    padding: 1.875vw;
+    padding: 1.25vw;
   }
 }
 @media screen and (max-width: 767px) {
   .header__inner {
     display: block;
-    padding: 6.4vw 0;
+    padding: 4.2666666667vw 0;
   }
 }
 
 .headerLogo {
   width: 100%;
+  padding: 8px 0;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
+  border-top: 2px solid #ADD16B;
+  border-bottom: 2px solid #ADD16B;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .headerLogo {
+    padding: 0.625vw;
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 767px) {
   .headerLogo {
+    padding: 2.1333333333vw;
     font-size: 8.5333333333vw;
     text-align: center;
   }
@@ -228,7 +233,7 @@ ul {
   line-height: 1.5;
   color: #212121;
   text-align: center;
-  background: #03A9F4;
+  background: transparent;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .quiz {
@@ -246,7 +251,6 @@ ul {
 .quiz__wrapper {
   padding: 20px 0;
   margin: 0 auto;
-  background-color: #03a9f4;
 }
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .quiz__wrapper {

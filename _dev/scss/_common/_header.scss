@@ -4,7 +4,9 @@
   position: fixed;
   width: 100%;
   color: #fafafa;
-  background: #0288d1;
+  background: -moz-linear-gradient(bottom left,#0288d1, #b3e5fc);
+  background: -webkit-linear-gradient(bottom left,#0288d1, #b3e5fc);
+  background: linear-gradient(to top right,#0288d1, #b3e5fc);
 
   @include mixin.mq(tablet) {
     height: mixin.get_vw(80, 1280);
@@ -20,31 +22,36 @@
 
     display: flex;
     justify-content: space-between;
-    padding: 24px 0;
+    padding: 16px 0;
 
     @include mixin.mq(tablet) {
-      padding: mixin.get_vw(24, 1280);
+      padding: mixin.get_vw(16, 1280);
     }
 
     @include mixin.mq() {
       display: block;
-      padding: mixin.get_vw(24) 0;
+      padding: mixin.get_vw(16) 0;
     }
   }
 }
 
 .headerLogo {
   width: 100%;
+  padding: 8px 0;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 3.2rem;
   font-weight: bold;
   text-align: center;
+  border-top: 2px solid #ADD16B;
+  border-bottom: 2px solid #ADD16B;
 
   @include mixin.mq(tablet) {
+    padding: mixin.get_vw(8, 1280);
     font-size: mixin.get_vw(32, 1280);
   }
 
   @include mixin.mq() {
+    padding: mixin.get_vw(8);
     font-size: mixin.get_vw(32);
     text-align: center;
   }
