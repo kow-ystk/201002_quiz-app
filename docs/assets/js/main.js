@@ -3,31 +3,31 @@ const quiz = [
     question: 'アイスランド',
     choices: ['レイキャビク', 'アークレイリ', 'ケプラビーク', 'へプン'],
     answer: 'レイキャビク',
-    image: 'https://kow-ystk.github.io/quiz-app/images/reykjavik.jpg',
+    image: 'https://kow-ystk.github.io/201002_quiz-app/assets/images/reykjavik.jpg',
   },
   {
     question: 'スウェーデン',
     choices: ['ヨーテボリ', 'ストックホルム', 'マルメ', 'ウプサラ'],
     answer: 'ストックホルム',
-    image: 'https://kow-ystk.github.io/quiz-app/images/stockholm.jpg',
+    image: 'https://kow-ystk.github.io/201002_quiz-app/assets/images/stockholm.jpg',
   },
   {
     question: 'デンマーク',
     choices: ['オーゼンセ', 'オーフス', 'ビルン', 'コペンハーゲン'],
     answer: 'コペンハーゲン',
-    image: 'https://kow-ystk.github.io/quiz-app/images/copenhagen.jpg',
+    image: 'https://kow-ystk.github.io/201002_quiz-app/assets/images/copenhagen.jpg',
   },
   {
     question: 'フィンランド',
     choices: ['タンペレ', 'トゥルク', 'オウル', 'ヘルシンキ'],
     answer: 'ヘルシンキ',
-    image: 'https://kow-ystk.github.io/quiz-app/images/helsinki.jpg',
+    image: 'https://kow-ystk.github.io/201002_quiz-app/assets/images/helsinki.jpg',
   },
   {
     question: 'ノルウェー',
     choices: ['オスロ', 'ベルゲン', 'トロンハイム', 'スタヴァンゲル'],
     answer: 'オスロ',
-    image: 'https://kow-ystk.github.io/quiz-app/images/oslo.jpg',
+    image: 'https://kow-ystk.github.io/201002_quiz-app/assets/images/oslo.jpg',
   },
 ];
 
