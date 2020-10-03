@@ -77,6 +77,11 @@ const init = () => {
 };
 
 const goToNext = () => {
+  $window.scroll({
+    top: 0,
+    behavior: 'smooth'
+  });
+
   const buttonLen = $buttons.length;
   let btnIndex = 0;
 
