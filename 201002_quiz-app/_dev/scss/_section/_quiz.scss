@@ -6,6 +6,7 @@
   justify-content: center;
   height: 100vh;
   padding: 80px 0 0;
+  font-family: 'Kosugi Maru', sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
   color: #212121;
@@ -87,6 +88,7 @@
 .quiz__retryBtn {
   width: 100%;
   height: 64px;
+  font-family: 'Kosugi Maru', sans-serif;
 
   @include mixin.mq(tablet) {
     height: mixin.get_vw(64, 1280);
@@ -136,6 +138,7 @@
 }
 
 .quizStart__startBtn {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 5.4rem;
 
   @include mixin.mq(tablet) {
