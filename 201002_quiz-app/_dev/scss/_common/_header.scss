@@ -2,7 +2,7 @@
 
 .header {
   color: #333;
-  background: #e46a38;
+  background: #9dddac;
 
   &__inner {
     @include mixin.sectionWidth();
@@ -26,8 +26,10 @@
 }
 
 .headerLogo {
+  width: 100%;
   font-size: 3.2rem;
   font-weight: bold;
+  text-align: center;
 
   @include mixin.mq(tablet) {
     font-size: mixin.get_vw(32, 1280);

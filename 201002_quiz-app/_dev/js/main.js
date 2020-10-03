@@ -62,7 +62,7 @@ const startGame = () => {
 const init = () => {
   $question.innerHTML = `問題${quizCount + 1}:<br>${
     quiz[quizCount].question
-  }の<br>首都はどれ？`;
+  }の首都はどれ？`;
 
   $image.innerHTML = `<img class='quizImage__capitalImg' src='${quiz[quizCount].image}' alt='首都の写真'>`;
 
