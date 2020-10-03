@@ -86,7 +86,7 @@ const goToNext = () => {
     btnIndex++;
   }
 
-  $answer.textContent = '';
+  $answer.textContent = '回答中・・・';
   quizCount++;
   if (quizCount < quizLen) {
     init(quizCount);

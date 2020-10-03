@@ -6,23 +6,29 @@
   color: #fafafa;
   background: #0288d1;
 
+  @include mixin.mq(tablet) {
+    height: mixin.get_vw(80, 1280);
+  }
+
+  @include mixin.mq() {
+    display: block;
+    height: mixin.get_vw(80) 0;
+  }
+
   &__inner {
     @include mixin.sectionWidth();
 
     display: flex;
     justify-content: space-between;
     padding: 24px 0;
-    font-size: 1.6rem;
 
     @include mixin.mq(tablet) {
       padding: mixin.get_vw(24, 1280);
-      font-size: mixin.get_vw(16, 1280);
     }
 
     @include mixin.mq() {
       display: block;
       padding: mixin.get_vw(24) 0;
-      font-size: mixin.get_vw(16);
     }
   }
 }
