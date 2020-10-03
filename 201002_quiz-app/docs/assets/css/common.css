@@ -110,9 +110,6 @@ html {
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 60px;
   overflow-x: hidden;
   font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
   color: #212121;
@@ -203,77 +200,6 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .headerMenu__list {
-    display: none;
-    width: 53.3333333333vw;
-  }
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #fafafa;
-  background: #0288d1;
-}
-.footer__inner {
-  width: 80%;
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 0;
-  font-size: 1.6rem;
-}
-@media screen and (max-width: 767px) {
-  .footer__inner {
-    width: 91.4666666667vw;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .footer__inner {
-    padding: 1.875vw;
-    font-size: 1.25vw;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footer__inner {
-    display: block;
-    padding: 6.4vw 0;
-    font-size: 4.2666666667vw;
-  }
-}
-
-.footerLogo {
-  width: 100%;
-  font-size: 3.2rem;
-  font-weight: bold;
-  text-align: center;
-}
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .footerLogo {
-    font-size: 2.5vw;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footerLogo {
-    font-size: 8.5333333333vw;
-    text-align: center;
-  }
-}
-
-.footerMenu__list {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
-  font-weight: bold;
-}
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .footerMenu__list {
-    width: 31.25vw;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footerMenu__list {
     display: none;
     width: 53.3333333333vw;
   }
