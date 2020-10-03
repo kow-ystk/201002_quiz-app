@@ -1,16 +1,18 @@
 div.quiz__wrapper(data-js="js-wrapper")
   //- 問題
   div.quizQuestion(data-js="js-question")
-  //- 画像
-  div.quizImage(data-js="js-image")
-  //- 選択肢
-  div.quizContents(data-js="js-contents")
-    button.quizContents__choices(type="button" data-js="js-btn")
-      | a
-    button.quizContents__choices(type="button" data-js="js-btn")
-      | a
-    button.quizContents__choices(type="button" data-js="js-btn")
-      | a
-    button.quizContents__choices(type="button" data-js="js-btn")
-      | a
+  //- PCでのみ横並び
+  div.pcFlex
+    //- 画像
+    div.quizImage(data-js="js-image")
+    //- 選択肢
+    div.quizContents(data-js="js-contents")
+      button.quizContents__choices(type="button" data-js="js-btn")
+        | a
+      button.quizContents__choices(type="button" data-js="js-btn")
+        | a
+      button.quizContents__choices(type="button" data-js="js-btn")
+        | a
+      button.quizContents__choices(type="button" data-js="js-btn")
+        | a
   div.quizAnswer(data-js="js-answer")

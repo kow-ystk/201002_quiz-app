@@ -1,4 +1,7 @@
+@use '../_foundation/mixin' as mixin;
+
 .quiz {
+  padding: 16px 0;
   font-size: 2.4rem;
   line-height: 1.5;
   color: #212121;
@@ -16,20 +19,28 @@
   font-size: 2.8rem;
   text-align: center;
   background: #bce2e8;
+  border-radius: 10px;
 }
 
 .quizQuestion,
-.quizContents,
-.quizImage,
 .quizAnswer,
 .quizTitle,
 .quizEnd__txt {
   width: 50%;
   max-width: 400px;
+  padding: 16px 0;
   margin: 0 auto;
+}
+.quizContents,
+.quizImage {
+  width: 40%;
+  @include mixin.mq(){
+    margin: 0 auto;
+  }
 }
 
 .quizContents {
+  height: 324px;
   padding: 10px;
   background-color: #B3E5FC;
   border-radius: 5%;
@@ -38,6 +49,10 @@
 .quizStart,
 .quiz__end {
   padding: 20px 0;
+}
+
+.quizContents__choices {
+  height: 64px;
 }
 
 .quizStart__startBtn,
@@ -70,6 +85,7 @@
 
 .quizContents__choices--incorrect {
   text-decoration: line-through;
+  background: #0096aa;
 }
 
 .quizImage {
