@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   padding: 80px 0 0;
   font-family: 'Kosugi Maru', sans-serif;
   font-size: 2.4rem;
@@ -14,13 +14,11 @@
   background: #03A9F4;
 
   @include mixin.mq(tablet) {
-    height: auto;
     padding: mixin.get_vw(80, 1280) 0 0;
     font-size: mixin.get_vw(24, 1280);
   }
 
   @include mixin.mq() {
-    height: auto;
     padding: mixin.get_vw(80) 0 0;
     font-size: mixin.get_vw(24);
   }
@@ -48,26 +46,31 @@
   justify-content: center;
   width: 600px;
   height: 140px;
+  padding: 12px 0;
   margin: 0 auto;
   background: #b3e5e8;
   border-radius: 5px;
 
   @include mixin.mq(tablet) {
-    width: 90vw;
+    width: 50vw;
     height: auto;
+    padding: mixin.get_vw(12, 1280);
     border-radius: mixin.get_vw(5, 1280);
   }
 
   @include mixin.mq() {
     width: 90vw;
     height: auto;
+    padding: mixin.get_vw(12);
     border-radius: mixin.get_vw(5);
   }
 }
 .quizContents,
 .quizImage {
   width: 45%;
+
   @include mixin.mq(){
+    width: 90vw;
     margin: 0 auto;
   }
 }
@@ -76,11 +79,19 @@
   height: 324px;
   padding: 12px;
   background-color: #B3E5FC;
-  border-radius: 5%;
+  border-radius: 12px;
+
+  @include mixin.mq(tablet) {
+    height: mixin.get_vw(324, 1280);
+    padding: mixin.get_vw(12, 1280);
+    margin: 0 auto;
+    border-radius: mixin.get_vw(12, 1280);
+  }
 
   @include mixin.mq(){
     height: auto;
     padding: mixin.get_vw(12);
+    border-radius: mixin.get_vw(12);
   }
 }
 
@@ -102,7 +113,7 @@
 .quizNext,
 .quiz__retryBtn {
   @include mixin.mq(tablet) {
-    width: 80vw;
+    width: 50vw;
   }
 
   @include mixin.mq() {
@@ -166,15 +177,6 @@
   }
 }
 
-.quizStart__startBtn:hover,
-.quiz__retryBtn:hover,
-.quizContents__choices:hover {
-  position: relative;
-  top: 4px;
-  border: none;
-  opacity: 0.7;
-}
-
 .quizStart {
   width: 100vw;
   height: calc(100vh - 80px);
@@ -197,6 +199,11 @@
 .quizImage {
   display: block;
   padding: 20px 0;
+
+  @include mixin.mq(tablet) {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .quizImage__capitalImg {
@@ -234,4 +241,14 @@
   @include mixin.mq() {
     padding: mixin.get_vw(36) 0 0;
   }
+}
+
+.quizStart__startBtn:hover,
+.quiz__retryBtn:hover,
+.quizContents__choices:hover,
+.quizNext:hover {
+  position: relative;
+  top: 4px;
+  border: none;
+  opacity: 0.7;
 }
