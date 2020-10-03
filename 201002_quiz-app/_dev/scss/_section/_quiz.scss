@@ -1,17 +1,20 @@
 @use '../_foundation/mixin' as mixin;
 
 .quiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   padding: 16px 0;
+  padding-top: 80px;
   font-size: 2.4rem;
   line-height: 1.5;
   color: #212121;
   text-align: center;
   background: #03A9F4;
-  height: 100vh;
 }
 
 .quiz__wrapper {
-  padding: 20px;
   margin: 0 auto;
   background-color: #03a9f4;
 }
@@ -19,16 +22,18 @@
 .quizQuestion,
 .quizAnswer,
 .quizEnd__txt {
-  width: 50%;
-  max-width: 400px;
-  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 140px;
   margin: 0 auto;
   background: #b3e5e8;
   border-radius: 5px;
 }
 .quizContents,
 .quizImage {
-  width: 40%;
+  width: 45%;
   @include mixin.mq(){
     margin: 0 auto;
   }
@@ -47,6 +52,7 @@
 }
 
 .quizContents__choices {
+  width: 100%;
   height: 64px;
 }
 
@@ -72,6 +78,11 @@
   top: 4px;
   border: none;
   opacity: 0.7;
+}
+
+.quizContents__choices--correct,
+.quizContents__choices--incorrect {
+  pointer-events: none;
 }
 
 .quizContents__choices--correct {

@@ -98,14 +98,14 @@ const goToNext = () => {
 
 const judge = (elm) => {
   if (elm.textContent === quiz[quizCount].answer) {
-    $answer.innerHTML = `正解！問題${quizCount + 1}の答えは<br>${
+    $answer.innerHTML = `正解！やったね！<br>問題${quizCount + 1}の答えは<br>${
       quiz[quizCount].answer
-    }です`;
+    }だよ！`;
     score++;
   } else {
-    $answer.innerHTML = `残念！不正解...問題${quizCount + 1}の答えは<br>${
+    $answer.innerHTML = `残念！不正解・・・<br>問題${quizCount + 1}の答えは<br>${
       quiz[quizCount].answer
-    }です`;
+    }だよ！`;
   }
 
   const buttonLen = $buttons.length;
@@ -127,9 +127,9 @@ const judge = (elm) => {
 };
 
 const showEnd = () => {
-  $endTxt.textContent = `終了！あなたのスコアは
-  ${Math.floor((score / quizLen) * 100
-  )}です`;
+  $endTxt.innerHTML = `終了！あなたのスコアは<br>
+                      ${Math.floor((score / quizLen) * 100)}
+                      でした〜！`;
 
   $wrapper.classList.remove('quiz__wrapper--active');
   $wrapper.classList.add('quiz__wrapper');

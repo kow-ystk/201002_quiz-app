@@ -1,6 +1,8 @@
 @use '../_foundation/mixin' as mixin;
 
 .header {
+  position: fixed;
+  width: 100%;
   color: #fafafa;
   background: #0288d1;
 
