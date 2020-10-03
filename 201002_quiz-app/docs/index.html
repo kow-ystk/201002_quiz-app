@@ -10,6 +10,8 @@
     <meta name="Keywords" content="">
     <link rel="icon" href="/icon/favicon.ico">
     <link rel="apple-touch-icon" href="/icon/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&amp;display=swap" rel="stylesheet">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:title" content="北欧 首都当てクイズ">
@@ -25,31 +27,28 @@
       </div>
     </header>
     <main class="quiz">
-      <h1 class="quizTitle">首都を当ててみよう！</h1>
       <div class="quiz__start--active quizStart" data-js="js-start">
         <button class="quizStart__startBtn" type="button" data-js="js-startBtn">START!</button>
       </div>
       <div class="quiz__wrapper" data-js="js-wrapper">
         <div class="quizQuestion" data-js="js-question"></div>
-        <div class="quizImage" data-js="js-image"></div>
-        <div class="quizContents" data-js="js-contents">
-          <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
-          <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
-          <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
-          <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
+        <div class="pcFlex">
+          <div class="quizImage" data-js="js-image"></div>
+          <div class="quizContents" data-js="js-contents">
+            <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
+            <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
+            <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
+            <button class="quizContents__choices" type="button" data-js="js-btn">a</button>
+          </div>
         </div>
-        <div class="quizAnswer" data-js="js-answer"></div>
+        <div class="quizAnswer" data-js="js-answer">回答中・・・</div>
+        <div class="quizNext" data-js="js-next">次へ進む</div>
       </div>
       <div class="quiz__end quizEnd" data-js="js-end">
         <p class="quizEnd__txt" data-js="js-endTxt"></p>
         <button class="quiz__retryBtn" type="button" data-js="js-retryBtn">もう一度挑戦する</button>
       </div>
     </main>
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footerLogo">北欧 首都当てクイズ</div>
-      </div>
-    </footer>
     <script src="/assets/js/lib.js"></script>
     <script src="/assets/js/main.js"></script>
   </body>

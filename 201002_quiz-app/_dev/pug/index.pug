@@ -24,16 +24,11 @@ html(lang='ja')
       include _modules/_header.pug
 
     main.quiz
-      h1.quizTitle
-        | 首都を当ててみよう！
       //- クイズ開始前のみ表示
       include _section/_beforeQuiz.pug
       //- クイズ中のみ表示
       include _section/_quiz.pug
       //- クイズ終了後のみ表示
       include _section/_afterQuiz.pug
-
-    block footer
-      include _modules/_footer.pug
 
     include _modules/_script.pug

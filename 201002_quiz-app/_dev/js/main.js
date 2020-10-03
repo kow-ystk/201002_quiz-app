@@ -42,6 +42,7 @@ const $contents = $doc.querySelector('[data-js="js-contents"]');
 const $start = $doc.querySelector('[data-js="js-start"]');
 const $wrapper = $doc.querySelector('[data-js="js-wrapper"]');
 const $end = $doc.querySelector('[data-js="js-end"]');
+const $next = $doc.querySelector('[data-js="js-next"]');
 
 const $startBtn = $doc.querySelector('[data-js="js-startBtn"]');
 const $retryBtn = $doc.querySelector('[data-js="js-retryBtn"]');
@@ -62,7 +63,7 @@ const startGame = () => {
 const init = () => {
   $question.innerHTML = `問題${quizCount + 1}:<br>${
     quiz[quizCount].question
-  }の<br>首都はどれ？`;
+  }の首都はどれ？`;
 
   $image.innerHTML = `<img class='quizImage__capitalImg' src='${quiz[quizCount].image}' alt='首都の写真'>`;
 
@@ -82,11 +83,12 @@ const goToNext = () => {
   while (btnIndex < buttonLen) {
     $buttons[btnIndex].classList.remove('quizContents__choices--correct');
     $buttons[btnIndex].classList.remove('quizContents__choices--incorrect');
+    $next.classList.remove('quizNext--active');
     $buttons[btnIndex].disabled = false;
     btnIndex++;
   }
 
-  $answer.textContent = '';
+  $answer.textContent = '回答中・・・';
   quizCount++;
   if (quizCount < quizLen) {
     init(quizCount);
@@ -98,14 +100,14 @@ const goToNext = () => {
 
 const judge = (elm) => {
   if (elm.textContent === quiz[quizCount].answer) {
-    $answer.innerHTML = `正解！問題${quizCount + 1}の答えは<br>${
+    $answer.innerHTML = `正解！やったね！<br>問題${quizCount + 1}の答えは<br>${
       quiz[quizCount].answer
-    }です`;
+    }だよ！`;
     score++;
   } else {
-    $answer.innerHTML = `残念！不正解...問題${quizCount + 1}の答えは<br>${
+    $answer.innerHTML = `残念！不正解・・・<br>問題${quizCount + 1}の答えは<br>${
       quiz[quizCount].answer
-    }です`;
+    }だよ！`;
   }
 
   const buttonLen = $buttons.length;
@@ -123,13 +125,14 @@ const judge = (elm) => {
     btnIndex++;
   }
 
-  setTimeout('goToNext()', 3000);
+  $next.classList.add('quizNext--active');
+  $next.addEventListener('click', goToNext);
 };
 
 const showEnd = () => {
-  $endTxt.textContent = `終了！あなたのスコアは
-  ${Math.floor((score / quizLen) * 100
-  )}です`;
+  $endTxt.innerHTML = `終了！あなたのスコアは<br>
+                      ${Math.floor((score / quizLen) * 100)}
+                      でした〜！`;
 
   $wrapper.classList.remove('quiz__wrapper--active');
   $wrapper.classList.add('quiz__wrapper');
