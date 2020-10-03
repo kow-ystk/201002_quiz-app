@@ -54,6 +54,8 @@ let quizCount = 0;
 let score = 0;
 
 const startGame = () => {
+  return_scroll();
+
   $start.classList.remove('quiz__start--active');
   $start.classList.add('quiz__start');
 
@@ -98,8 +100,8 @@ const goToNext = () => {
   if (quizCount < quizLen) {
     init(quizCount);
   } else {
-    // $window.alert('クイズ終了！');
     showEnd();
+    no_scroll();
   }
 };
 
@@ -146,8 +148,29 @@ const showEnd = () => {
 };
 
 const reload = () => {
-  document.location.reload();
+  $doc.location.reload();
 };
+
+// スクロール禁止
+const no_scroll = () => {
+  // PCでのスクロール禁止
+  $doc.addEventListener('mousewheel', scroll_control, { passive: false });
+  // スマホでのタッチ操作でのスクロール禁止
+  $doc.addEventListener('touchmove', scroll_control, { passive: false });
+};
+// スクロール禁止解除
+const return_scroll = () => {
+  // PCでのスクロール禁止解除
+  $doc.removeEventListener('mousewheel', scroll_control, { passive: false });
+  // スマホでのタッチ操作でのスクロール禁止解除
+  $doc.removeEventListener('touchmove', scroll_control, { passive: false });
+};
+
+const scroll_control = (event) => {
+  event.preventDefault();
+};
+
+no_scroll();
 
 $startBtn.addEventListener('click', startGame);
 
