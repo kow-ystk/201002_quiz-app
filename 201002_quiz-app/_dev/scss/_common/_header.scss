@@ -1,0 +1,58 @@
+@use '../_foundation/mixin' as mixin;
+
+.header {
+  color: #333;
+  background: #e46a38;
+
+  &__inner {
+    @include mixin.sectionWidth();
+
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    font-size: 1.6rem;
+
+    @include mixin.mq(tablet) {
+      padding: mixin.get_vw(24, 1280);
+      font-size: mixin.get_vw(16, 1280);
+    }
+
+    @include mixin.mq() {
+      display: block;
+      padding: mixin.get_vw(24) 0;
+      font-size: mixin.get_vw(16);
+    }
+  }
+}
+
+.headerLogo {
+  font-size: 3.2rem;
+  font-weight: bold;
+
+  @include mixin.mq(tablet) {
+    font-size: mixin.get_vw(32, 1280);
+  }
+
+  @include mixin.mq() {
+    font-size: mixin.get_vw(32);
+    text-align: center;
+  }
+}
+
+.headerMenu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    font-weight: bold;
+
+    @include mixin.mq(tablet) {
+      width: mixin.get_vw(400, 1280);
+    }
+
+    @include mixin.mq() {
+      display: none;
+      width: mixin.get_vw(200);
+    }
+  }
+}

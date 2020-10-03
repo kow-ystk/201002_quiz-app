@@ -1,0 +1,364 @@
+@charset "utf-8";@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: "";
+  content: none;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  color: #333;
+  text-decoration: none;
+  background-color: #ff9;
+}
+
+/* change colours to suit your needs */
+mark {
+  font-style: italic;
+  font-weight: bold;
+  color: #333;
+  background-color: #ff9;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+@media all and (-ms-high-contrast: none) {
+  body {
+    font-family: "メイリオ", Meiryo, sans-serif;
+  }
+}
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  color: #333;
+  background: #e46a38;
+}
+.header__inner {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 767px) {
+  .header__inner {
+    width: 91.4666666667vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .header__inner {
+    padding: 1.875vw;
+    font-size: 1.25vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__inner {
+    display: block;
+    padding: 6.4vw 0;
+    font-size: 4.2666666667vw;
+  }
+}
+
+.headerLogo {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .headerLogo {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .headerLogo {
+    font-size: 8.5333333333vw;
+    text-align: center;
+  }
+}
+
+.headerMenu__list {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .headerMenu__list {
+    width: 31.25vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .headerMenu__list {
+    display: none;
+    width: 53.3333333333vw;
+  }
+}
+
+.footer {
+  color: #333;
+  background: #e46a38;
+}
+.footer__inner {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 767px) {
+  .footer__inner {
+    width: 91.4666666667vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footer__inner {
+    padding: 1.875vw;
+    font-size: 1.25vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__inner {
+    display: block;
+    padding: 6.4vw 0;
+    font-size: 4.2666666667vw;
+  }
+}
+
+.footerLogo {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footerLogo {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footerLogo {
+    font-size: 8.5333333333vw;
+    text-align: center;
+  }
+}
+
+.footerMenu__list {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .footerMenu__list {
+    width: 31.25vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footerMenu__list {
+    display: none;
+    width: 53.3333333333vw;
+  }
+}
+
+.quiz {
+  font-size: 2rem;
+  color: #333;
+  background: #f1f1f1;
+}
+
+.quiz__wrapper {
+  width: 90%;
+  max-width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #9dd2ac;
+}
+
+.quizTitle {
+  font-size: 2.4rem;
+  background: #bce2e8;
+}
+
+.quizContents {
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #c3e8a1;
+}
+
+.quizStart,
+.quiz__end {
+  padding: 20px 0;
+}
+
+.quizStart__startBtn,
+.quiz__retryBtn,
+.quizContents__choices {
+  display: block;
+  margin: 10px auto 0;
+  font-size: 2rem;
+  color: #333;
+  background-color: #bce2e8;
+  border: none;
+  outline-style: none;
+}
+
+.quizContents__choices--correct {
+  font-weight: bold;
+}
+
+.quizContents__choices--incorrect {
+  text-decoration: line-through;
+}
+
+.quizImage {
+  display: block;
+  width: 80%;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.quizImage__capitalImg {
+  display: block;
+  width: 100%;
+}
+
+.quiz__start,
+.quiz__wrapper,
+.quiz__end {
+  display: none;
+}
+
+.quiz__start--active,
+.quiz__wrapper--active,
+.quiz__end--active {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .displayPC {
+    display: none;
+  }
+}
+
+.displaySP {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .displaySP {
+    display: block;
+  }
+}
+
+.underlineHide {
+  text-decoration: none;
+}

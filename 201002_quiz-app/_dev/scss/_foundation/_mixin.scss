@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+// メディアクエリ
+$breakpoints: (
+  "sp": "screen and (max-width: 414px)",
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (min-width: 768px)",
+  "tablet": "screen and (min-width: 768px) and (max-width: 1280px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// px→vwに変換
+@function get_vw($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// コンテンツ幅
+@mixin sectionWidth() {
+  width: 80%;
+  max-width: 960px;
+  margin: 0 auto;
+  @include mq() {
+    width: get_vw(343);
+  }
+}

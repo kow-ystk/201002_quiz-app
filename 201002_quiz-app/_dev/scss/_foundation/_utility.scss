@@ -1,0 +1,19 @@
+@use '../_foundation/mixin' as mixin;
+
+.displayPC {
+  @include mixin.mq(){
+    display: none;
+  }
+}
+
+.displaySP {
+  display: none;
+  @include mixin.mq(){
+    display: block;
+  }
+}
+
+.underlineHide {
+  text-decoration: none;
+}
+
