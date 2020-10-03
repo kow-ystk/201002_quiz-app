@@ -114,7 +114,8 @@ body {
   font-family: YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
   color: #212121;
   background: #03a9f4;
-  overscroll-behavior-y: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
 }
 
 @media all and (-ms-high-contrast: none) {
