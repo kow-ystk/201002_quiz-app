@@ -7,6 +7,7 @@
   color: #212121;
   text-align: center;
   background: #03A9F4;
+  height: 100vh;
 }
 
 .quiz__wrapper {
@@ -15,16 +16,8 @@
   background-color: #03a9f4;
 }
 
-.quizTitle {
-  font-size: 2.8rem;
-  text-align: center;
-  background: #b3e5e8;
-  border-radius: 10px;
-}
-
 .quizQuestion,
 .quizAnswer,
-.quizTitle,
 .quizEnd__txt {
   width: 50%;
   max-width: 400px;
