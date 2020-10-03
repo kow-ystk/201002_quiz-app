@@ -11,7 +11,7 @@
   line-height: 1.5;
   color: #212121;
   text-align: center;
-  background: #03A9F4;
+  background: transparent;
 
   @include mixin.mq(tablet) {
     padding: mixin.get_vw(80, 1280) 0 0;
@@ -27,7 +27,6 @@
 .quiz__wrapper {
   padding: 20px 0;
   margin: 0 auto;
-  background-color: #03a9f4;
 
   @include mixin.mq(tablet) {
     padding: mixin.get_vw(20, 1280);
