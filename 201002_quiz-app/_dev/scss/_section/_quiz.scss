@@ -1,21 +1,21 @@
 .quiz {
-  font-size: 2rem;
-  color: #333;
-  background: #f1f1f1;
-  text-align: center;
+  font-size: 2.4rem;
   line-height: 1.5;
+  color: #212121;
+  text-align: center;
+  background: #03A9F4;
 }
 
 .quiz__wrapper {
   padding: 20px;
   margin: 0 auto;
-  background-color: #9dd2ac;
+  background-color: #03a9f4;
 }
 
 .quizTitle {
-  font-size: 2.4rem;
-  background: #bce2e8;
+  font-size: 2.8rem;
   text-align: center;
+  background: #bce2e8;
 }
 
 .quizQuestion,
@@ -31,7 +31,8 @@
 
 .quizContents {
   padding: 10px;
-  background-color: #c3e8a1;
+  background-color: #B3E5FC;
+  border-radius: 5%;
 }
 
 .quizStart,
@@ -43,15 +44,15 @@
 .quiz__retryBtn,
 .quizContents__choices {
   display: block;
-  margin: 10px auto 0;
-  font-size: 2rem;
-  color: #333;
-  background-color: #bce2e8;
-  border: none;
-  border-bottom: 4px solid #bbd2e5;
-  outline-style: none;
-  border-radius: 8px;
   padding: 12px 16px;
+  margin: 10px auto 0;
+  font-size: 2.4rem;
+  color: #212121;
+  background-color: #00BCD4;
+  border: none;
+  border-bottom: 4px solid #0096aa;
+  border-radius: 8px;
+  outline-style: none;
 }
 
 .quizStart__startBtn:hover,
@@ -79,6 +80,7 @@
 .quizImage__capitalImg {
   display: block;
   width: 100%;
+  box-shadow: 0 5px 5px 5px rgba($color: #000, $alpha: 0.25);
 }
 
 .quiz__start,

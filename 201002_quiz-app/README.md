@@ -28,3 +28,7 @@ ctrl + Cでコマンドを止めてから、以下のコマンドを実行後、
 ```
 $ npm run build
 ```
+## 配色
+参考
+[material design palette](https://www.materialpalette.com/light-blue/cyan)
+[encycolorpedia](https://encycolorpedia.jp/00bcd4)

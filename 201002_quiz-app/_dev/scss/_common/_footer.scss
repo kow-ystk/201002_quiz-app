@@ -1,8 +1,11 @@
 @use '../_foundation/mixin' as mixin;
 
 .footer {
-  color: #333;
-  background:#9dddac;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fafafa;
+  background:#0288d1;
 
   &__inner {
     @include mixin.sectionWidth();
