@@ -297,7 +297,7 @@ ul {
 .quizTitle {
   font-size: 2.8rem;
   text-align: center;
-  background: #bce2e8;
+  background: #b3e5e8;
   border-radius: 10px;
 }
 
@@ -309,6 +309,8 @@ ul {
   max-width: 400px;
   padding: 16px 0;
   margin: 0 auto;
+  background: #b3e5e8;
+  border-radius: 5px;
 }
 
 .quizContents,
